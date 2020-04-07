@@ -1,0 +1,178 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1166388338,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on DarkSky Detroit page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Detroit",
+                  "offset": 16
+                }
+              ],
+              "location": "DarkSkySD.setup(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7453262115,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedSD.setup()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Verify timeline is correct",
+        "description": "",
+        "id": "verify-darksky;verify-timeline-is-correct",
+        "after": [
+          {
+            "result": {
+              "duration": 305333027,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedSD.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8967342739,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I verify hours ere displayed with 2 hour increment",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 34
+                }
+              ],
+              "location": "DarkSkySD.verifyTimeLine(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@timeline"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 925800391,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on DarkSky Detroit page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Detroit",
+                  "offset": 16
+                }
+              ],
+              "location": "DarkSkySD.setup(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3578237591,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedSD.setup()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Verify temperature is correct",
+        "description": "",
+        "id": "verify-darksky;verify-temperature-is-correct",
+        "after": [
+          {
+            "result": {
+              "duration": 203780202,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SharedSD.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1556344516,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I verify highest and lowest temperature matches",
+            "match": {
+              "location": "DarkSkySD.verifyTemperature()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 13,
+            "name": "@temperature"
+          }
+        ]
+      }
+    ],
+    "name": "Verify DarkSky",
+    "description": "",
+    "id": "verify-darksky",
+    "keyword": "Feature",
+    "uri": "darkSky.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@web"
+      }
+    ]
+  }
+]
