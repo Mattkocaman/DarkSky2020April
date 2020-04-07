@@ -64,7 +64,7 @@ public class DarkSky extends ElementUtil{
             e.printStackTrace();
         }
         for(int i=1;i<getTimeline().size();i++){
-            boolean timeVerify = getTimeline().get(i - 1)==(getTimeline().get(i)-hour); //This line verifies -hour- difference
+            boolean timeVerify = (getTimeline().get(i - 1)+hour)%12==(getTimeline().get(i)); //This line verifies -hour- difference
             if (!timeVerify){ return false;}
         }
         return true;
