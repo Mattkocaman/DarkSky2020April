@@ -8,7 +8,7 @@ import java.util.*;
 
 public class DarkSky extends ElementUtil{
 
-    private By searchBox = By.xpath("//input[@type='text']");//input[@type='text']
+    private By searchBox = By.xpath("//input[@type='text']");
     private By searchButton = By.xpath("//a[@class='searchButton']");
     private By timeline = By.xpath("//div[@id='timeline']//span[@class='hour']");
     private By lowTop = By.xpath("//span[@class='low-temp-text']");
@@ -20,8 +20,8 @@ public class DarkSky extends ElementUtil{
         clear(searchBox);
         sendValue(searchBox,value);
         clickOn(searchButton);
-
     }
+
     public boolean verifyLowTemp(){
         try{
             Thread.sleep(1000);
@@ -46,12 +46,12 @@ public class DarkSky extends ElementUtil{
     }
 
     public ArrayList<Integer> getTimeline(){
-        ArrayList<Integer> hourList = new ArrayList<>();
-        hourList.add(currentHour()%12);
+        ArrayList<Integer> hourList = new ArrayList<>();//This list is for storing new hour list
+        hourList.add(currentHour()%12);//I added %12 because Calendar.HOUR_OF_DAY is returning 24h format
         List<WebElement> darkHours = getElements(timeline);
         for (WebElement timeList : darkHours) {
             String hour = timeList.getText().replaceAll("[^0-9]", "");
-            if(hour.equals("")){continue;}
+            if(hour.equals("")){continue;}//this line is here because first element of hour list is Now and it turned => "" at line 53
             hourList.add(Integer.parseInt(hour));
         }
         return hourList;
@@ -64,7 +64,7 @@ public class DarkSky extends ElementUtil{
             e.printStackTrace();
         }
         for(int i=1;i<getTimeline().size();i++){
-            boolean timeVerify = (getTimeline().get(i - 1)+hour)%12==(getTimeline().get(i));
+            boolean timeVerify = getTimeline().get(i - 1)==(getTimeline().get(i)-hour); //This line verifies -hour- difference
             if (!timeVerify){ return false;}
         }
         return true;
