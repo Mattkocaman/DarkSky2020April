@@ -22,7 +22,7 @@ public class BasePage {
 
             switch (browser) {
                 case "chrome":
-                    WebDriverManager.chromedriver().version("79.0.3945.36").setup();
+                    WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
                     break;
                 case "chrome_headless":
