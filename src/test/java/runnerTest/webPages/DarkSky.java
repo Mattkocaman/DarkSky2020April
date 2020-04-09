@@ -1,9 +1,7 @@
 package runnerTest.webPages;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import java.util.*;
 
 public class DarkSky extends ElementUtil{
@@ -69,25 +67,4 @@ public class DarkSky extends ElementUtil{
         }
         return true;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  try{
-//        String temp1= getTextFromElement(lowTop);
-//        String temp2= getTextFromElement(lowToday);
-//        return temp1.equals(temp2);
-//    }
-//     catch (StaleElementReferenceException ignored){ }
-//       return false;
 }

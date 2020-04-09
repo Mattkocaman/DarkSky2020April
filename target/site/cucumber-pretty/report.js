@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 7303752779,
+  "duration": 8563079772,
   "status": "passed"
 });
 formatter.background({
@@ -38,7 +38,7 @@ formatter.match({
   "location": "DarkSkySD.setup(String)"
 });
 formatter.result({
-  "duration": 1317890654,
+  "duration": 1254668293,
   "status": "passed"
 });
 formatter.scenario({
@@ -70,15 +70,15 @@ formatter.match({
   "location": "DarkSkySD.verifyTimeLine(int)"
 });
 formatter.result({
-  "duration": 11230639085,
+  "duration": 8555447899,
   "status": "passed"
 });
 formatter.after({
-  "duration": 286435694,
+  "duration": 269367431,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4143446828,
+  "duration": 4186291393,
   "status": "passed"
 });
 formatter.background({
@@ -103,7 +103,7 @@ formatter.match({
   "location": "DarkSkySD.setup(String)"
 });
 formatter.result({
-  "duration": 997047917,
+  "duration": 942598173,
   "status": "passed"
 });
 formatter.scenario({
@@ -129,11 +129,11 @@ formatter.match({
   "location": "DarkSkySD.verifyTemperature()"
 });
 formatter.result({
-  "duration": 2582017932,
+  "duration": 1828660734,
   "status": "passed"
 });
 formatter.after({
-  "duration": 312540257,
+  "duration": 220017060,
   "status": "passed"
 });
 });
